@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	
+	<head lang="Pt-br">
+		
+		<meta charset="UTF-8">
+		<title>Jogo da Memoria</title>
+		<script src="jquery.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="flipcard.css"></head>
+	<body>
+		
+		<h1>Jogo da Memoria</h1><br>
+		<div id="menu">
+			
+			<button class="op" id="b1" type="button">Jogar</button><br><br>
+			<button class="op" id="b2" type="button">Manual</button><br><br>
+			
+		</div>
+		<div id="inst">
+		
+			<h2> INSTRUÇÕES </h2>
+			<p> É um clássico jogo de memória. Você recebeu <br>
+			vinte cartas viradas para baixo e limite de tempo de 100 <br>
+			segundos. Clique nos cartões para virá-los. Lá <br>
+			são 10 avatares (cada duas vezes) distribuídos entre <br>
+			os 20 cartões. Combine cada um dos 10 pares de avatares <br>
+			virando as cartas. Se algum par não corresponder a ambos <br>
+			as cartas serão viradas novamente. Você perde se você falhar em <br>
+			combine todas as cartas antes que o tempo acabe. </p> <br>
+			<button class = "op" id = "bck" type = "button"> Voltar </button>
+		
+		</div>
+		<div id="load"><br><br><br><br><h2>Carregando...</h2></div>
+		<div id="gameinfo">
+		<div class="stat">
+			Temp <span id="tmrmn">100</span>s
+		</div>
+		<div class="stat" id="flp">
+			Flips <span id="flpcnt">0</span>
+		</div>
+		<br style="clear: left;"/>
+		</div>
+		<br><br>
+		<div id="board">
+			
+			<div class="cards" id="c1">
+				
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/uva.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c2">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/uva.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c3">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/laranja.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c4">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/laranja.jpg"></div>
+				
+			</div><br>
+			<div class="cards" id="c5">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/114514-2.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c6">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/114514-2.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c7">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/abacaxi.png"></div>
+				
+			</div>
+			<div class="cards" id="c8">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/abacaxi.png"></div>
+				
+			</div><br>
+			<div class="cards" id="c9">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/maracujá-1.png"></div>
+				
+			</div>
+			<div class="cards" id="c10">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/maracujá-1.png"></div>
+				
+			</div>
+			<div class="cards" id="c11">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/morango.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c12">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/morango.jpg"></div>
+				
+			</div><br>
+			<div class="cards" id="c13">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/limão.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c14">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/limão.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c15">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/banana.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c16">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/banana.jpg"></div>
+				
+			</div><br>
+			<div class="cards" id="c17">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/water.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c18">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/water.jpg"></div>
+				
+			</div>
+			<div class="cards" id="c19">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/apple.png"></div>
+				
+			</div>
+			<div class="cards" id="c20">
+					
+				<div class="card-back card-face"><img class="skeleton" src="cards/back.jpg"></div>
+				<div class="card-front card-face"><img class="card-value" src="cards/apple.png"></div>
+				
+			</div>
+			<br style="clear: left;"/>
+			
+		</div>
+		<div class = "result" id="win">
+			
+			<h2>VITORIA! </h2><br>
+			<h3>Tempo Restante <span id="wintim"></span>s</h3>
+			<h3>Flips <span id="flipwin"></span></h3>
+			<button class="btn" type="button">Jogue Novamente</button>
+			
+		</div>
+		<div class = "result" id="loss">
+			
+			<h2>PERDEU!</h2><br>
+			<h3>Tempo Restante <span id="lostim"></span>s</h3>
+			<h3>Flips <span id="fliplos"></span></h3>
+			<h3>Cards Combinados <span id="crdmat"></span></h3>
+			<button class="btn" type="button">Jogar novamente</button>
+			
+		</div>
+		<br><br>
+		<script type="text/javascript" src="flipcard.js"></script>
+		
+	</body>
+	
+</html>
